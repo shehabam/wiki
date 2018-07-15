@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        {% for wiki in wikis %}
+
+            <ol>
+                <a href="{% url 'page-detail' wiki.id %}">
+                <li>{{wiki.title}}</li>
+                <li>{{wiki.content}}</li>
+                <li>{{wiki.last_update}}</li>
+                </a>
+            </ol>
+        {% endfor %}
+
+    </body>
+</html>
